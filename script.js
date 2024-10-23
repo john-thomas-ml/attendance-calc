@@ -22,7 +22,7 @@ document.getElementById('attendance-form').addEventListener('submit', function(e
 
     let result = "";
 
-    if ((curr / tot) < (req / 100)) {
+    if ((curr / tot) <= (req / 100)) {
         let classes = Math.ceil((req * tot - 100 * curr) / (100 - req));
         let percentage = Math.floor(((curr + classes) / (tot + classes)) * 100);
         result = `You need to attend ${classes} more classes, and your percentage will become ${percentage}%.`;
