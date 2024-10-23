@@ -27,7 +27,7 @@ document.getElementById('attendance-form').addEventListener('submit', function(e
         let percentage = Math.floor(((curr + classes) / (tot + classes)) * 100);
         result = `You need to attend ${classes} more classes, and your percentage will become ${percentage}%.`;
     } else {
-        let classes = Math.ceil((100 * curr - req * tot) / req) - 1;
+        let classes = Math.floor((100 * curr - req * tot) / req);
         let percentage = Math.floor((curr / (tot + classes)) * 100);
         result = `You can miss ${classes} classes, and your percentage will become ${percentage}%.`;
     }
