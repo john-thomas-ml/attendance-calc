@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Attendance Calculator</h1>
+    
+    <form id="attendance-form">
+        <label for="curr">Classes Attended:</label>
+        <input type="number" id="curr" placeholder="Enter number of classes attended" min="0" required>
+        
+        <label for="tot">Total Classes:</label>
+        <input type="number" id="tot" placeholder="Enter total classes till now" min="1" required>
+        
+        <label for="req">Desired Percentage:</label>
+        <input type="number" id="req" placeholder="Enter desired attendance percentage" min="1" max="100" required>
+
+        <button type="submit">Calculate</button>
+    </form>
+
+    <div id="result"></div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
